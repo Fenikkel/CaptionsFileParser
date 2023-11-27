@@ -1,0 +1,35 @@
+{
+  "name": "com.fenikkel.captions-file-parser",
+  "displayName": "Captions File Parser",
+  "description": "Parse subtitle files to C# data structures.",
+  "version": "1.0.0",
+  "keywords": [
+    "color",
+    "fade",
+    "tween",
+    "fenikkel",
+    "interpolation"
+  ],
+  "homepage": "https://gist.github.com/Fenikkel/ac17483b76d4dab60963a6b3af638b39#-hi-there-im-pau-fenollosa",
+  "bugs": {
+    "url": "https://github.com/Fenikkel/SimpleTween/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Fenikkel/SimpleTween.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Fenikkel",
+    "email": "paufenollosa@gmail.com",
+    "url": "https://gist.github.com/Fenikkel/ac17483b76d4dab60963a6b3af638b39#-hi-there-im-pau-fenollosa"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "//": "In dependencies, you say the minimum version that the package can work with, if it's avaliable a higher version, it will use that one",
+  "type": "library",
+  "documentationUrl": "https://github.com/Fenikkel/SimpleTween/tree/main/Documentation%7E",
+  "changelogUrl": "https://github.com/Fenikkel/SimpleTween/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Fenikkel/SimpleTween/blob/main/LICENSE.md"
+}
