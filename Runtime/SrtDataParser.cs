@@ -21,7 +21,7 @@ public class SrtDataParser : ICaptionDataParser
     {
         if (string.IsNullOrEmpty(filePath))
         {
-            Debug.LogWarning($"Captions parse aborted for <b>{Path.GetFileName(filePath)}</b>");
+            Debug.LogError($"Captions parse aborted for <b>{Path.GetFileName(filePath)}</b>");
             return null;
         }
 
@@ -68,13 +68,13 @@ public class SrtDataParser : ICaptionDataParser
                                 }
                                 else
                                 {
-                                    Debug.LogWarning($"Line {fileLineIndex} has an incorrect <b>srt index</b>: It's {readedLine} and it should be {srtIndex}");
+                                    Debug.LogError($"Line {fileLineIndex} has an incorrect <b>srt index</b>: It's {readedLine} and it should be {srtIndex}");
                                     return null;
                                 }
                             }
                             else
                             {
-                                Debug.LogWarning($"Line {fileLineIndex} it should be a <b>index</b>: {readedLine}\nIf the previous line is a line break, please, delete it");
+                                Debug.LogError($"Line {fileLineIndex} it should be a <b>index</b>: {readedLine}\nIf the previous line is a line break, please, delete it");
                                 return null;
                             }
 
@@ -94,7 +94,7 @@ public class SrtDataParser : ICaptionDataParser
 
                             if (intervalKeyframes.Length != 2)
                             {
-                                Debug.LogWarning($"Line {fileLineIndex} it should be a <b>time interval</b>: {readedLine}\nIf it's a time interval, make sure that has the correct format.\nExample: 00:01:46,860 --> 00:01:49,970");
+                                Debug.LogError($"Line {fileLineIndex} it should be a <b>time interval</b>: {readedLine}\nIf it's a time interval, make sure that has the correct format.\nExample: 00:01:46,860 --> 00:01:49,970");
                                 return null;
                             }
 
@@ -116,13 +116,13 @@ public class SrtDataParser : ICaptionDataParser
 
                             if (!TimeSpan.TryParse(intervalKeyframes[0], out entryTime))
                             {
-                                Debug.LogWarning($"Line {fileLineIndex}: incorrect <b>entry time format</b>: {readedLine}");
+                                Debug.LogError($"Line {fileLineIndex}: incorrect <b>entry time format</b>: {readedLine}");
                                 return null;
                             }
 
                             if (!TimeSpan.TryParse(intervalKeyframes[1], out exitTime))
                             {
-                                Debug.LogWarning($"Line {fileLineIndex}: incorrect <b>exit time format</b>: {readedLine}");
+                                Debug.LogError($"Line {fileLineIndex}: incorrect <b>exit time format</b>: {readedLine}");
                                 return null;
                             }
 
@@ -133,7 +133,7 @@ public class SrtDataParser : ICaptionDataParser
 
                             if (string.IsNullOrWhiteSpace(readedLine))
                             {
-                                Debug.LogWarning($"Subtitle row one in line {fileLineIndex} can't be emptyLine. If it's a line break, delete it please.");
+                                Debug.LogError($"Subtitle row one in line {fileLineIndex} can't be emptyLine. If it's a line break, delete it please.");
                                 return null;
                             }
 
@@ -148,13 +148,13 @@ public class SrtDataParser : ICaptionDataParser
 
                             if (string.IsNullOrWhiteSpace($"{subtitleOne}{subtitleTwo}"))
                             {
-                                Debug.LogWarning("The caption text is empty. It's useless add this subtitle");
+                                Debug.LogError("The caption text is empty. It's useless add this subtitle");
                                 break;
                             }
 
                             if (exitTime < entryTime)
                             {
-                                Debug.LogWarning("Interval inconsistency. The parameter <b>exitTime</b> must be greater or equal than <b>entryTime</b>. Subtitle not added.");
+                                Debug.LogError("Interval inconsistency. The parameter <b>exitTime</b> must be greater or equal than <b>entryTime</b>. Subtitle not added.");
                                 break;
                             }
 
@@ -169,7 +169,7 @@ public class SrtDataParser : ICaptionDataParser
 
                             if (!string.IsNullOrWhiteSpace(readedLine))
                             {
-                                Debug.LogWarning($"Invalid srt format. Line <b>{fileLineIndex}</b> should be a white space.\nCancelling the parse.");
+                                Debug.LogError($"Invalid srt format. Line <b>{fileLineIndex}</b> should be a white space.\nCancelling the parse.");
                                 return null;
                             }
 
@@ -177,7 +177,7 @@ public class SrtDataParser : ICaptionDataParser
                             break;
 
                         default:
-                            Debug.LogWarning($"Pointer type not implemented: <b>{filePointer}</b>");
+                            Debug.LogError($"Pointer type not implemented: <b>{filePointer}</b>");
                             return null;
                     }
                 }
@@ -195,7 +195,7 @@ public class SrtDataParser : ICaptionDataParser
         }
         catch (UnauthorizedAccessException)
         {
-            Debug.LogWarning($"You don't have access to this file. Try to enable via file properties or your user permissions. Path: <b>{filePath}</b>");
+            Debug.LogError($"You don't have access to this file. Try to enable via file properties or your user permissions. Path: <b>{filePath}</b>");
             return null;
         }
 

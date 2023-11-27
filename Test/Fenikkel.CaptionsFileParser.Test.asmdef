@@ -1,0 +1,16 @@
+{
+    "name": "Fenikkel.CaptionsFileParser.Test",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8d72e89e01474474f961eac0eb1d3349"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

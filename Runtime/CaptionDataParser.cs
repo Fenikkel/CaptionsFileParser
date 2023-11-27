@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 public class CaptionDataParser : ICaptionDataParser
@@ -10,6 +11,11 @@ public class CaptionDataParser : ICaptionDataParser
         None,
         SRT,
         TXT
+    }
+
+    public Queue<Caption> Parse(TextAsset textAsset) 
+    {
+        return Parse(AssetDatabase.GetAssetPath(textAsset));
     }
 
     public Queue<Caption> Parse(string filePath)
