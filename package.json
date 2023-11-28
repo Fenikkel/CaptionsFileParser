@@ -31,5 +31,19 @@
   "type": "library",
   "documentationUrl": "https://github.com/Fenikkel/CaptionsFileParser/tree/main/Documentation%7E",
   "changelogUrl": "https://github.com/Fenikkel/CaptionsFileParser/blob/main/CHANGELOG.md",
-  "licensesUrl": "https://github.com/Fenikkel/CaptionsFileParser/blob/main/LICENSE.md"
+  "licensesUrl": "https://github.com/Fenikkel/CaptionsFileParser/blob/main/LICENSE.md",
+
+
+  "samples": [
+    {
+        "displayName": "Caption Files Examples",
+        "description": "Repertory of different subtitle file formats",
+        "path": "Samples~/SamplesCaptionFiles"
+    },
+    {
+      "displayName": "Captions Data Parser Validator",
+      "description": "Example of how validate data",
+      "path": "Samples~/CaptionsDataParserValidator"
+  }
+  ]
 }

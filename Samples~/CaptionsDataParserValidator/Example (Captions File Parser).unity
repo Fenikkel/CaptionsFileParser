@@ -197,7 +197,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 876411103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 039686dc0dba15a469003336d3c312ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 25a37417ee11b5f45aa463ec99cd725d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &902294141
@@ -724,11 +724,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 876411105}
-        m_TargetAssemblyTypeName: CaptionsDataParser_Debugger, Fenikkel.CaptionsFileParser.Test
+        m_TargetAssemblyTypeName: CaptionsDataParserValidator, Fenikkel.CaptionsFileParser.Test
         m_MethodName: ShowData
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11500000, guid: 039686dc0dba15a469003336d3c312ee, type: 3}
+          m_ObjectArgument: {fileID: 11500000, guid: 25a37417ee11b5f45aa463ec99cd725d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -857,11 +857,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 876411105}
-        m_TargetAssemblyTypeName: CaptionsDataParser_Debugger, Fenikkel.CaptionsFileParser.Test
+        m_TargetAssemblyTypeName: CaptionsDataParserValidator, Fenikkel.CaptionsFileParser.Test
         m_MethodName: ShowData
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 77ea1abfff84730488e1b2cb5e88e229, type: 3}
+          m_ObjectArgument: {fileID: 2811297602134710623, guid: 77435d3322ea75c4cb7e7d78615ff844, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1082,11 +1082,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 876411105}
-        m_TargetAssemblyTypeName: CaptionsDataParser_Debugger, Fenikkel.CaptionsFileParser.Test
+        m_TargetAssemblyTypeName: CaptionsDataParserValidator, Fenikkel.CaptionsFileParser.Test
         m_MethodName: ShowData
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 491eead437d3d2a4698da4cb35d40b9c, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 45f053020f5a8a442a352d1cd697e1a5, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
