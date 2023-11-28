@@ -2,6 +2,11 @@
 
 Easy and simple way to convert subtitle files into C# data structures.
 
+<p align="center">
+  <img src="https://github.com/Fenikkel/CaptionsFileParser/assets/41298931/148d7f8a-6555-4a75-984b-a635f5a3f186" alt="Art image"/>
+</p>
+
+
 &nbsp;
 ## Usage
 Create a CaptionDataParser and use Parse() with the desired caption file to obtain a Queue<Caption> with all the data:
